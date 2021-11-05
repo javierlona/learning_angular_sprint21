@@ -8,7 +8,7 @@ import { MyPageComponent } from './components/my-page/my-page.component';
 import { CreatePageComponent } from './components/create-page/create-page.component';
 
 const routes: Routes = [
-  { path: '/', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomePageComponent, pathMatch: 'full' },
   { path: 'details/:id', component: DetailPageComponent },
   { path: 'contact/:id', component: ContactPageComponent },
