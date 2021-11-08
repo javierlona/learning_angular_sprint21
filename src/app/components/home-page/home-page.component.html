@@ -1,1 +1,32 @@
 <p>home-page works!</p>
+<p>{{ pageTitle }}</p>
+<table class="u-full-width">
+  <thead>
+    <tr>
+      <th>User ID</th>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Completed</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let todo of todos">
+      <td>{{ todo.userId }}</td>
+      <td>{{ todo.id }}</td>
+      <td>{{ todo.title }}</td>
+      <td>{{ todo.completed }}</td>
+    </tr>
+    <tr>
+      <td>Dave Gamache</td>
+      <td>26</td>
+      <td>Male</td>
+      <td>San Francisco</td>
+    </tr>
+    <tr>
+      <td>Dwayne Johnson</td>
+      <td>42</td>
+      <td>Male</td>
+      <td>Hayward</td>
+    </tr>
+  </tbody>
+</table>
