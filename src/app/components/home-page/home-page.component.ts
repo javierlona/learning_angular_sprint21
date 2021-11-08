@@ -11,9 +11,27 @@ export class HomePageComponent implements OnInit {
   pageTitle: string = "Sprint 21 Homepage";
   todos: Todo[] = [];
 
-  constructor() { }
+  constructor(
+    private informationService: InformationService,
+  ) { }
 
   ngOnInit(): void {
+    this.getMyDataFunction();
+  }
+
+  private getMyDataFunction() {
+    this.informationService.getInfo()
+    .subscribe(responseData => {
+      this.todos = responseData
+    });
+
+    /*
+    * Use the line below to view the data
+    * in the console
+    *
+    */
+    // this.informationService.getInfo()
+    // .subscribe(responseData => console.log(responseData));
   }
 
 }
