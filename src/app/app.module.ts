@@ -10,6 +10,7 @@ import { ContactPageComponent } from './components/contact-page/contact-page.com
 import { MyPageComponent } from './components/my-page/my-page.component';
 import { CreatePageComponent } from './components/create-page/create-page.component';
 import { EditPageComponent } from './components/edit-page/edit-page.component';
+import { NavbarComponent } from './components/shared/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { EditPageComponent } from './components/edit-page/edit-page.component';
     ContactPageComponent,
     MyPageComponent,
     CreatePageComponent,
-    EditPageComponent
+    EditPageComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

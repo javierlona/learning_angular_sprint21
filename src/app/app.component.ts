@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'learning-angular-sprint21';
+  appTitle = 'Learning Angular Sprint 21';
 }
