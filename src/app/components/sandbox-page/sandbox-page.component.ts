@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sandbox-page.component.css']
 })
 export class SandboxPageComponent implements OnInit {
+  examplePropBinding: string = "Property Binding";
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  clickTheButton() {
+    alert("You clicked the button");
   }
 
 }
