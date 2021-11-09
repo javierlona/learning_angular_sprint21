@@ -20,7 +20,7 @@ export class HomePageComponent implements OnInit {
   }
 
   private getMyDataFunction() {
-    this.informationService.getInfo()
+    this.informationService.getTodos()
     .subscribe(responseData => {
       this.todos = responseData
     });
