@@ -6,6 +6,7 @@ import { ContactPageComponent } from './components/contact-page/contact-page.com
 import { EditPageComponent } from './components/edit-page/edit-page.component';
 import { MyPageComponent } from './components/my-page/my-page.component';
 import { CreatePageComponent } from './components/create-page/create-page.component';
+import { SandboxPageComponent } from './components/sandbox-page/sandbox-page.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'edit/:id', component: EditPageComponent },
   { path: 'my-page', component: MyPageComponent },
   { path: 'create-page', component: CreatePageComponent },
+  { path: 'sandbox-page', component: SandboxPageComponent },
 ];
 
 @NgModule({

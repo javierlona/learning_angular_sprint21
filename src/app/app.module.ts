@@ -11,6 +11,7 @@ import { MyPageComponent } from './components/my-page/my-page.component';
 import { CreatePageComponent } from './components/create-page/create-page.component';
 import { EditPageComponent } from './components/edit-page/edit-page.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
+import { SandboxPageComponent } from './components/sandbox-page/sandbox-page.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
     MyPageComponent,
     CreatePageComponent,
     EditPageComponent,
-    NavbarComponent
+    NavbarComponent,
+    SandboxPageComponent
   ],
   imports: [
     BrowserModule,
