@@ -18,5 +18,10 @@ export class InformationService {
     return this.http.get<Todo[]>('https://jsonplaceholder.typicode.com/todos');
   }
 
+  getTodoById(id: string): Observable<Todo> {
+    console.log(id);
+    return this.http.get<Todo>(`https://jsonplaceholder.typicode.com/todos/${id}`);
+  }
+
   // editTodos(id: )
 }
