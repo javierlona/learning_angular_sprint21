@@ -30,7 +30,7 @@ export class HomePageComponent implements OnInit {
     * in the console
     *
     */
-    // this.informationService.getInfo()
+    // this.informationService.getTodos()
     // .subscribe(responseData => console.log(responseData));
   }
 

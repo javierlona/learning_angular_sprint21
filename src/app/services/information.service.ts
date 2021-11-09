@@ -12,9 +12,11 @@ export class InformationService {
     private http: HttpClient,
     ) { }
 
-  getTodos(): Observable<any[]> {
+  getTodos(): Observable<Todo[]> {
     console.log("Here in getinfo");
-    console.log(this.http.get<any>('https://jsonplaceholder.typicode.com/todos'));
-    return this.http.get<any>('https://jsonplaceholder.typicode.com/todos');
+    console.log(this.http.get<Todo>('https://jsonplaceholder.typicode.com/todos'));
+    return this.http.get<Todo[]>('https://jsonplaceholder.typicode.com/todos');
   }
+
+  // editTodos(id: )
 }
