@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-sandbox-page',
@@ -16,6 +17,11 @@ export class SandboxPageComponent implements OnInit {
 
   clickTheButton() {
     alert("You clicked the button");
+  }
+
+  onTemplateSubmit(form: NgForm) {
+    console.log("Submitted");
+    console.log(form);
   }
 
 }
