@@ -24,7 +24,17 @@
       </div>
       <div class="row">
         <div class="one column">
-          <input ngModel name="input02" type="text" id="" placeholder="input 02">
+          <input
+            [(ngModel)]="answerInput02"
+            name="input02"
+            type="text"
+            id=""
+            placeholder="input 02">
+        </div>
+      </div>
+      <div class="row">
+        <div class="one column">
+          <input type="text" name="Input02" value="{{ answerInput02 }}" readonly>
         </div>
       </div>
       <div class="row">

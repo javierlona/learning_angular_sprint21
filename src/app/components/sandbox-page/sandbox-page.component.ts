@@ -12,6 +12,7 @@ export class SandboxPageComponent implements OnInit {
   constructor() { }
   makeTextRedItalic: boolean = true;
   defaultInput01: string = "ngModel property binding";
+  answerInput02: string = '';
 
   ngOnInit(): void {
   }
