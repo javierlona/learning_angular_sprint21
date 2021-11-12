@@ -13,7 +13,13 @@
     <form (ngSubmit)="onTemplateSubmit(templateForm.value)" #templateForm="ngForm">
       <div class="row">
         <div class="one column">
-          <input ngModel name="input01" type="text" id="" placeholder="input 01">
+          <input
+            [ngModel]="defaultInput01"
+            name="input01"
+            type="text"
+            id=""
+            placeholder="input 01"
+          >
         </div>
       </div>
       <div class="row">
