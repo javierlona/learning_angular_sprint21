@@ -9,6 +9,7 @@ export class SandboxPageComponent implements OnInit {
   examplePropBinding: string = "Property Binding";
 
   constructor() { }
+  makeTextRedItalic: boolean = true;
 
   ngOnInit(): void {
   }
