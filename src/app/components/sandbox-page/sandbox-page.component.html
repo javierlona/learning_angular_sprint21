@@ -17,7 +17,6 @@
             [ngModel]="defaultInput01"
             name="input01"
             type="text"
-            id=""
             placeholder="input 01"
           >
         </div>
@@ -28,46 +27,29 @@
             [(ngModel)]="answerInput02"
             name="input02"
             type="text"
-            id=""
-            placeholder="input 02">
-        </div>
-      </div>
-      <div class="row">
-        <div class="one column">
-          <input type="text" name="Input02" value="{{ answerInput02 }}" readonly>
-        </div>
-      </div>
-      <div class="row">
-        <div class="one column">
-          <input ngModel name="input03" type="text" id="" placeholder="input 03">
-        </div>
-      </div>
-      <div class="row">
-        <button class="button-primary" type="submit">Submit</button>
-      </div>
-    </form>
-  </div>
-  <div class="one-half column">
-    <p>Model Driven form</p>
-    <form>
-      <div class="row">
-        <div class="one column">
-          <input
-            name="input04"
-            type="text"
-            id=""
-            placeholder="input 04"
+            placeholder="input 02"
           >
         </div>
       </div>
       <div class="row">
         <div class="one column">
-          <input type="text" name="Input05" value="" readonly placeholder="input 05">
+          <input
+            type="text"
+            name="Input02"
+            value="{{ answerInput02 }}"
+            readonly
+          >
         </div>
       </div>
       <div class="row">
         <div class="one column">
-          <input ngModel name="input06" type="text" id="" placeholder="input 06">
+          <input
+            ngModel
+            name="input03"
+            type="text"
+            id=""
+            placeholder="input 03"
+          >
         </div>
       </div>
       <div class="row">
@@ -75,5 +57,6 @@
       </div>
     </form>
   </div>
+
 </div>
 
