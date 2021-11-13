@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { FormGroup, FormControl } from "@angular/forms";
 
 @Component({
   selector: 'app-sandbox-page',
@@ -7,14 +8,20 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./sandbox-page.component.css']
 })
 export class SandboxPageComponent implements OnInit {
-  examplePropBinding: string = "Property Binding";
-
-  constructor() { }
   makeTextRedItalic: boolean = true;
   defaultInput01: string = "ngModel property binding";
   answerInput02: string = '';
+  examplePropBinding: string = "Property Binding";
+  modelDrivenForm: FormGroup | undefined;
+
+  constructor() { }
 
   ngOnInit(): void {
+    this.modelDrivenForm = new FormGroup({
+      input04: new FormControl(''),
+      input05: new FormControl(''),
+      input06: new FormControl(''),
+    });
   }
 
   clickTheButton() {
