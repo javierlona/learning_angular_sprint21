@@ -57,6 +57,44 @@
       </div>
     </form>
   </div>
-
+  <div class="one-half column">
+    <p>Model Driven form</p>
+    <form
+      [formGroup]="modelDrivenForm"
+      (ngSubmit)="onModelSubmit()"
+    >
+      <div class="row">
+        <div class="one column">
+          <input
+            type="text"
+            placeholder="input 04"
+            formControlName="input04"
+          >
+        </div>
+      </div>
+      <div class="row">
+        <div class="one column">
+          <input
+            type="text"
+            placeholder="input 05"
+            formControlName="input05"
+          >
+        </div>
+      </div>
+      <div class="row">
+        <div class="one column">
+          <input
+            type="text"
+            value=""
+            placeholder="input 06"
+            formControlName="input06"
+          >
+        </div>
+      </div>
+      <div class="row">
+        <button class="button-primary" type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
 </div>
 

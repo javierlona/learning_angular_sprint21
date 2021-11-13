@@ -12,7 +12,7 @@ export class SandboxPageComponent implements OnInit {
   defaultInput01: string = "ngModel property binding";
   answerInput02: string = '';
   examplePropBinding: string = "Property Binding";
-  modelDrivenForm: FormGroup | undefined;
+  modelDrivenForm!: FormGroup;
 
   constructor() { }
 
@@ -20,7 +20,7 @@ export class SandboxPageComponent implements OnInit {
     this.modelDrivenForm = new FormGroup({
       input04: new FormControl(''),
       input05: new FormControl(''),
-      input06: new FormControl(''),
+      input06: new FormControl('')
     });
   }
 
@@ -31,6 +31,10 @@ export class SandboxPageComponent implements OnInit {
   onTemplateSubmit(form: NgForm) {
     console.log("Submitted");
     console.log(form);
+  }
+
+  onModelSubmit() {
+    console.log(this.modelDrivenForm.value);
   }
 
 }
