@@ -33,3 +33,5 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 * Event & Property Binding
 * Routing
 * Making GET HTTP requests
+* Template-driven forms, model-driven forms, built-in validators
+* Attribute directives
