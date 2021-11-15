@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { FormGroup, FormControl } from "@angular/forms";
+import { FormGroup, FormControl, Validators } from "@angular/forms";
 
 @Component({
   selector: 'app-sandbox-page',
@@ -18,7 +18,11 @@ export class SandboxPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.modelDrivenForm = new FormGroup({
-      input04: new FormControl(''),
+      input04: new FormControl('', Validators.compose(
+        [
+          Validators.required,
+          Validators.pattern('[\\w\\-\\s\\/]+')
+        ])),
       input05: new FormControl(''),
       input06: new FormControl('')
     });

@@ -92,7 +92,10 @@
         </div>
       </div>
       <div class="row">
-        <button class="button-primary" type="submit">Submit</button>
+        <button class="button-primary"
+         type="submit"
+         [disabled]="!modelDrivenForm.valid"
+         >Submit</button>
       </div>
     </form>
   </div>
