@@ -8,6 +8,9 @@ import { InformationService } from 'src/app/services/information.service';
   styleUrls: ['./create-page.component.css']
 })
 export class CreatePageComponent implements OnInit {
+  userId: number = 0;
+  title: string = '';
+  completed: boolean = false;
 
   constructor(
     private router: Router,
@@ -22,6 +25,20 @@ export class CreatePageComponent implements OnInit {
   //     .subscribe(() => {
   //       this.router.navigateByUrl('/home');
   //     })
+  // }
+
+  onSubmit(): void {
+    alert("Creating a new todo");
+  }
+
+  // onButtonClicked(): void {
+  //   this.onSubmit.emit({
+  //     id: null,
+  //     name: this.name,
+  //     description: this.description,
+  //     price: Number(this.price),
+  //     views: 0,
+  //   });
   // }
 
 }
