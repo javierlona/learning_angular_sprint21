@@ -25,6 +25,7 @@ export class DetailPageComponent implements OnInit {
     this.informationService.getTodoById(id!)
     .subscribe(responseData => {
       console.log(responseData)
+      this.todo = responseData;
     })
   }
 
