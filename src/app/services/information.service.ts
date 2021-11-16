@@ -1,7 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Todo } from '../types';
+
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-type': 'application/json; charset=UTF-8',
+  })
+};
 
 @Injectable({
   providedIn: 'root'
@@ -23,5 +29,10 @@ export class InformationService {
     return this.http.get<Todo>(`https://jsonplaceholder.typicode.com/todos/${id}`);
   }
 
-  // editTodos(id: )
+  editTodos(id: string, title: string, completed: boolean, userId: number): Observable<Todo> {
+    return this.http.put<Todo>(`https://jsonplaceholder.typicode.com/todos/${id}`,
+    { title, completed, userId },
+    httpOptions,
+    );
+  }
 }
