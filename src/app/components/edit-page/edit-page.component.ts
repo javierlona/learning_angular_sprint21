@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { InformationService } from 'src/app/services/information.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Todo } from 'src/app/types';
 
 
@@ -14,6 +14,7 @@ export class EditPageComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     private informationService: InformationService,
   ) { }
 
@@ -30,8 +31,11 @@ export class EditPageComponent implements OnInit {
     })
   }
 
-  onSubmit(): void {
-    this.informationService.editTodo(this.todo!.id, this.todo!.title, this.todo!.completed, this.todo!.userId)
-  }
+  // onSubmit({id, title, completed, userId}): void {
+  //   this.informationService.editTodo(this.todo!.id, this.todo!.title, this.todo!.completed, this.todo!.userId)
+  //   .subscribe(() => {
+  //     this.router.navigateByUrl('/home')
+  //   });
+  // }
 
 }
