@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { InformationService } from 'src/app/services/information.service';
+import { ActivatedRoute } from '@angular/router';
+import { Todo } from 'src/app/types';
+
 
 @Component({
   selector: 'app-edit-page',
@@ -6,10 +10,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./edit-page.component.css']
 })
 export class EditPageComponent implements OnInit {
+  todo: Todo | undefined;
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    private informationService: InformationService,
+  ) { }
 
   ngOnInit(): void {
+    this.getTodo();
+  }
+
+  private getTodo() {
+    const id = this.route.snapshot.paramMap.get('id');
+    this.informationService.getTodoById(id!)
+    .subscribe(responseData => {
+      console.log(responseData)
+      this.todo = responseData;
+    })
   }
 
 }
