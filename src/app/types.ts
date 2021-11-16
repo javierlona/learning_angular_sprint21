@@ -1,5 +1,5 @@
 export interface Todo {
-  id: number,
+  id: string,
   userId: number,
   title: string,
   completed: boolean
@@ -11,7 +11,7 @@ export interface Todo {
 */
 export interface Album {
   userId: number,
-  idd: number,
+  id: number,
   title: string,
   band: string
 }
