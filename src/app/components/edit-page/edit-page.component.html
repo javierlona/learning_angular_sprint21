@@ -4,7 +4,7 @@
   <div class="row">
     <div class="six columns">
       <label for="userID">User ID</label>
-      <input class="u-full-width" type="email" disabled value="" id="userID">
+      <input class="u-full-width" type="email" disabled value="{{ todo?.userId }}" id="userID">
     </div>
     <div class="six columns">
       <label for="completed">Completed</label>
@@ -16,6 +16,6 @@
     </div>
   </div>
   <label for="title">Title</label>
-  <input class="u-full-width" type="text" id="title">
+  <input class="u-full-width" type="text" id="title" value="{{ todo?.title }}">
   <input class="button-primary" type="submit" value="Submit">
 </form>

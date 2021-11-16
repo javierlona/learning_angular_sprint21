@@ -30,4 +30,8 @@ export class EditPageComponent implements OnInit {
     })
   }
 
+  onSubmit(): void {
+    this.informationService.editTodo(this.todo!.id, this.todo!.title, this.todo!.completed, this.todo!.userId)
+  }
+
 }
