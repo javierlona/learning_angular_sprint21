@@ -31,6 +31,13 @@ export class InformationService {
 
   editTodo(id: string, title: string, completed: boolean, userId: number): Observable<Todo> {
     return this.http.put<Todo>(`https://jsonplaceholder.typicode.com/todos/${id}`,
+    { id, title, completed, userId },
+    httpOptions,
+    );
+  }
+
+  createTodo(title: string, completed: boolean, userId: number): Observable<Todo> {
+    return this.http.post<Todo>(`https://jsonplaceholder.typicode.com/todos`,
     { title, completed, userId },
     httpOptions,
     );
