@@ -29,7 +29,7 @@ export class InformationService {
     return this.http.get<Todo>(`https://jsonplaceholder.typicode.com/todos/${id}`);
   }
 
-  editTodos(id: string, title: string, completed: boolean, userId: number): Observable<Todo> {
+  editTodo(id: string, title: string, completed: boolean, userId: number): Observable<Todo> {
     return this.http.put<Todo>(`https://jsonplaceholder.typicode.com/todos/${id}`,
     { title, completed, userId },
     httpOptions,
