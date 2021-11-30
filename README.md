@@ -35,3 +35,8 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 * Making GET HTTP requests
 * Template-driven forms, model-driven forms, built-in validators
 * Attribute directives
+
+## Deployment
+
+### How to Deploy in Prod
+[How to deploy to firebase](https://www.youtube.com/watch?v=mH8K-4YX34U)
