@@ -22,9 +22,21 @@ export class HomePageComponent implements OnInit {
 
   private getMyDataFunction() {
     this.informationService.getTodos()
-    .subscribe((responseData:any) => {
-        this.todos = responseData.data
+    .pipe(map((responseData: any ) => {
+      return responseData.data }))
+    .subscribe(responseData => {
+      this.todos = responseData
     });
+
+    /*
+    * A different way to manipulate the data
+    * when fetching complex data
+    *
+    */
+    // this.informationService.getTodos()
+    // .subscribe((responseData:any) => {
+    //     this.todos = responseData.data
+    // });
 
     /*
     * Use the line below to view the data
