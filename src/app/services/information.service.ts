@@ -20,13 +20,13 @@ export class InformationService {
 
   getTodos(): Observable<Todo[]> {
     console.log("Here in getinfo");
-    console.log(this.http.get<Todo>('https://jsonplaceholder.typicode.com/todos'));
-    return this.http.get<Todo[]>('https://jsonplaceholder.typicode.com/todos');
+    console.log(this.http.get<Todo>('http://127.0.0.1:8000/api/todos'));
+    return this.http.get<Todo[]>('http://127.0.0.1:8000/api/todos');
   }
 
   getTodoById(id: string): Observable<Todo> {
     console.log(id);
-    return this.http.get<Todo>(`https://jsonplaceholder.typicode.com/todos/${id}`);
+    return this.http.get<Todo>(`http://127.0.0.1:8000/api/todos/${id}`);
   }
 
   editTodo(id: string, title: string, completed: boolean, userId: number): Observable<Todo> {

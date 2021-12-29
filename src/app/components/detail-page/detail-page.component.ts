@@ -23,10 +23,18 @@ export class DetailPageComponent implements OnInit {
   private getTodo() {
     const id = this.route.snapshot.paramMap.get('id');
     this.informationService.getTodoById(id!)
-    .subscribe(responseData => {
-      console.log(responseData)
-      this.todo = responseData;
-    })
+    .subscribe((responseData:any) => {
+        this.todo = responseData.data
+    });
+    /*
+    * Use the line below to view the data
+    * when not inside an object array
+    *
+    */
+    // .subscribe(responseData => {
+    //   console.log(responseData)
+    //   this.todo = responseData;
+    // })
   }
 
 }

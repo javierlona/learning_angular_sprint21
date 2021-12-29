@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { InformationService } from 'src/app/services/information.service';
 import { Todo } from 'src/app/types';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-home-page',
@@ -21,9 +22,19 @@ export class HomePageComponent implements OnInit {
 
   private getMyDataFunction() {
     this.informationService.getTodos()
-    .subscribe(responseData => {
-      this.todos = responseData
+    .subscribe((responseData:any) => {
+        this.todos = responseData.data
     });
+
+    /*
+    * Use the line below to view the data
+    * when not inside an object array
+    *
+    */
+    // this.informationService.getTodos()
+    // .subscribe(responseData => {
+    //   this.todos = responseData
+    // });
 
     /*
     * Use the line below to view the data
