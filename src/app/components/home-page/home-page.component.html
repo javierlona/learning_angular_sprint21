@@ -11,6 +11,7 @@
     </tr>
   </thead>
   <tbody>
+    <!-- {{ todos | json }} -->
     <tr *ngFor="let todo of todos">
       <td>{{ todo.userId }}</td>
       <td><a routerLink="/details/{{ todo.id }}">{{ todo.id }}</a></td>
