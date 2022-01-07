@@ -7,6 +7,7 @@ import { EditPageComponent } from './components/edit-page/edit-page.component';
 import { MyPageComponent } from './components/my-page/my-page.component';
 import { CreatePageComponent } from './components/create-page/create-page.component';
 import { SandboxPageComponent } from './components/sandbox-page/sandbox-page.component';
+import { ParentExampleComponent } from './components/parent-example/parent-example.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'my-page', component: MyPageComponent },
   { path: 'create-page', component: CreatePageComponent },
   { path: 'sandbox-page', component: SandboxPageComponent },
+  { path: 'share-data', component: ParentExampleComponent },
 ];
 
 @NgModule({

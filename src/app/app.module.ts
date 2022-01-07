@@ -14,6 +14,8 @@ import { CreatePageComponent } from './components/create-page/create-page.compon
 import { EditPageComponent } from './components/edit-page/edit-page.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { SandboxPageComponent } from './components/sandbox-page/sandbox-page.component';
+import { ParentExampleComponent } from './components/parent-example/parent-example.component';
+import { ChildExampleComponent } from './components/child-example/child-example.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { SandboxPageComponent } from './components/sandbox-page/sandbox-page.com
     CreatePageComponent,
     EditPageComponent,
     NavbarComponent,
-    SandboxPageComponent
+    SandboxPageComponent,
+    ParentExampleComponent,
+    ChildExampleComponent
   ],
   imports: [
     BrowserModule,
