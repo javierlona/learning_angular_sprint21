@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./parent-example.component.css']
 })
 export class ParentExampleComponent implements OnInit {
+  // Variables
+  username: string = "John Doe";
 
   constructor() { }
 
